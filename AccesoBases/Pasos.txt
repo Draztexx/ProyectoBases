@@ -1,0 +1,14 @@
+crear la capeta del proyecto
+
+ng new backend --standalone=false
+
+ng serve --o
+
+npm install bootstrap@5.3.2
+
+en angular.json
+ 
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],

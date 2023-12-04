@@ -1,0 +1,16 @@
+
+###
+POST http://localhost:4000/api/productos
+Content-Type: application/json
+
+{
+    "nombre": "pizzaprueba2",
+    "categoria": "Italiana",
+    "precio": 30
+    
+    
+}
+
+###
+
+GET http://localhost:4000/api/productos

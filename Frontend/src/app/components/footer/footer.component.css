@@ -1,0 +1,36 @@
+/* footer.component.css */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 5px;
+}
+
+.footer-section h4 {
+  color: white;
+}
+
+.footer-section a i {
+  color: white; /* Cambio el color de los iconos a blanco */
+  font-size: 25px; /* Ajusto el tamaño de los iconos */
+  margin-right: 20px; /* Aumento la separación entre los iconos */
+  margin-top: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 5px;
+}

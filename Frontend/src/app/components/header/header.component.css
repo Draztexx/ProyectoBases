@@ -1,0 +1,69 @@
+/* header.component.css */
+
+header {
+  background-color: black;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+  border: 2px solid white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-right: 30px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+/* Aplica estilos adicionales a 'Productos' */
+ul li:first-child {
+  margin-left: 25px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Agrega una transición de color al hover */
+}
+
+ul li:first-child:hover {
+  color: gray; /* Cambia el color al hacer hover */
+}
+
+.user-cart-icons {
+  display: flex;
+}
+
+.user-cart-icons i {
+  font-size: 30px;
+  margin-right: 60px;
+  transition: color 0.3s ease; /* Agrega una transición de color al hover */
+}
+
+.user-cart-icons i:hover {
+  color: gray; /* Cambia el color al hacer hover */
+}

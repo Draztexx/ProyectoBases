@@ -4,9 +4,9 @@ POST http://localhost:4000/api/productos
 Content-Type: application/json
 
 {
-    "nombre": "pizzaprueba2",
-    "categoria": "Italiana",
-    "precio": 30
+    "nombre": "pizzaprueba3",
+    "categoria": " Española",
+    "precio": 40
     
     
 }
@@ -14,3 +14,26 @@ Content-Type: application/json
 ###
 
 GET http://localhost:4000/api/productos
+
+
+###
+
+PUT http://localhost:4000/api/productos/656e3676e91db881744f6d53
+Content-Type: application/json
+
+{
+
+  "nombre": "pizzaprueba2",
+  "categoria": "Italiana",
+  "precio": 100
+
+}
+
+
+###
+
+GET http://localhost:4000/api/productos/656e362de91db881744f6d51
+
+###
+
+DELETE http://localhost:4000/api/productos/65775c49246c0cc50cd6ff9f

@@ -4,7 +4,7 @@ POST http://localhost:4000/api/productos
 Content-Type: application/json
 
 {
-    "nombre": "pizzaprueba3",
+    "nombre": "pizzaprueba2",
     "categoria": " Española",
     "precio": 40
     
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 {
 
-  "nombre": "pizzaprueba2",
+  "nombre": "pasta",
   "categoria": "Italiana",
   "precio": 100
 

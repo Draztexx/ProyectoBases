@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { LatizquierdoComponent } from './components/latizquierdo/latizquierdo.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { RegisterComponent } from './components/register/register.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CarritoComponent,
+    LatizquierdoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { RegisterComponent } from './components/register/register.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

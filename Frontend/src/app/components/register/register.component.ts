@@ -15,6 +15,6 @@ export class RegisterComponent {
   }
 
   register() {
-    console.log('Registrarse...');
+
   }
 }

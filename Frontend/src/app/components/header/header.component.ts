@@ -8,21 +8,41 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   showLogin: boolean = false;
   showRegister: boolean = false;
+  showCarrito: boolean = false;
 
   toggleLogin() {
     this.showLogin = !this.showLogin;
-    if(this.showRegister==true){
-      this.showRegister=false;
-    }
+    this.hideOtherComponents('login');
   }
 
   onRegisterClick() {
     this.showRegister = true;
     this.showLogin = false;
+    this.hideOtherComponents('register');
   }
 
   onLoginClick() {
     this.showLogin = true;
     this.showRegister = false;
+    this.hideOtherComponents('login');
+  }
+
+
+toggleCarrito() {
+  this.showCarrito = !this.showCarrito;
+  this.hideOtherComponents('carrito');
+}
+
+
+  hideOtherComponents(exclude: string) {
+    if (exclude !== 'login') {
+      this.showLogin = false;
+    }
+    if (exclude !== 'register') {
+      this.showRegister = false;
+    }
+    if (exclude !== 'carrito') {
+      this.showCarrito = false;
+    }
   }
 }

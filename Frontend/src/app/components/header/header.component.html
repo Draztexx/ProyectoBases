@@ -1,3 +1,5 @@
+<!-- header.component.html -->
+
 <header>
   <div class="logo">
     <img src="assets/LogoBalloon.png" alt="Logo Balloon">
@@ -5,9 +7,10 @@
 
   <div class="user-cart-icons">
     <i class="fas fa-user" (click)="toggleLogin()"></i>
-    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-shopping-cart" (click)="toggleCarrito()"></i>
   </div>
 </header>
 
 <app-login *ngIf="showLogin" (onRegisterClick)="onRegisterClick()"></app-login>
 <app-register *ngIf="showRegister" (onLoginClick)="onLoginClick()"></app-register>
+<app-carrito *ngIf="showCarrito"></app-carrito>

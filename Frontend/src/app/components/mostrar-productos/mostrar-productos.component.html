@@ -1,0 +1,31 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Listado de Productos</h2>
+          <div class="row">
+            <div *ngFor="let producto of listProductos" class="col-md-4 col-sm-6 mb-4">
+              <div class="card">
+                <!--<img [src]="producto.imagenUrl" class="card-img-top" alt="{{producto.nombre}}">-->
+                <div class="card-body">
+                  <h5 class="card-title">{{producto.nombre}}</h5>
+                  <p class="card-text">descripcion</p>
+                  <p class="card-text">Precio: {{producto.precio | currency: 'EUR'}}</p>
+                  <div class="text-center">
+                    <a [routerLink]="['/editar-producto', producto._id]" class="btn btn-primary">Editar</a>
+                    <button (click)="eliminarProducto(producto._id)" class="btn btn-danger">Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5 class="mt-3" *ngIf="listProductos.length === 0">No hay productos para mostrar</h5>
+          <div class="text-end mt-3">
+            <button class="btn btn-success" routerLink="/crear-producto">NUEVO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

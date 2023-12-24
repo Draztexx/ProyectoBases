@@ -1,0 +1,54 @@
+/* lateral-izquierdo.component.css */
+
+.lateral-izquierdo-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Ajusta el ancho según sea necesario */
+}
+
+.categorias-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categorias-lista a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  transition: color 0.3s ease;
+}
+
+.categorias-lista a:hover {
+  color: gray; /* Color azul al hacer hover */
+}
+
+.categorias-lista li {
+  margin-bottom: 15px; /* Espaciado más pequeño entre categorías */
+}
+
+.ordenar-opciones label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filtro-precio {
+  margin-bottom: 20px;
+}
+
+.filtro-precio label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filtro-precio input {
+  width: calc(100% - 20px); /* Ajusta el ancho del input */
+  display: inline-block;
+}
+
+#valor-precio {
+  display: inline-block;
+  margin-left: 10px; /* Ajusta el espacio entre el input y el span */
+}

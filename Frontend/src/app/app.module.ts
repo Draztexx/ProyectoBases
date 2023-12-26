@@ -13,14 +13,23 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { LatizquierdoComponent } from './components/latizquierdo/latizquierdo.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MostrarProductosComponent } from './components/mostrar-productos/mostrar-productos.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MostrarProductosComponent,
     CrearProductoComponent,
-    ListarProductosComponent
+    ListarProductosComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent,
+    CarritoComponent,
+    LatizquierdoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +38,9 @@ import { MostrarProductosComponent } from './components/mostrar-productos/mostra
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
+    HttpClientModule,
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,8 @@ import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
+
+
 @Component({
   selector: 'app-crear-producto',
   templateUrl: './crear-producto.component.html',
@@ -80,6 +82,7 @@ export class CrearProductoComponent implements OnInit{
       })
     }
   }
+  
 
 
 }

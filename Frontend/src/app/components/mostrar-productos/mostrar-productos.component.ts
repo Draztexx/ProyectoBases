@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,9 +12,10 @@ import { ProductoService } from 'src/app/services/producto.service';
   styleUrls: ['./mostrar-productos.component.css']
 })
 export class MostrarProductosComponent {
+  
   listProductos: Producto[]=[];
 
-  constructor(private _productoService: ProductoService,private toastr: ToastrService){}
+  constructor(private _productoService: ProductoService,private toastr: ToastrService,private router: Router){}
 
 
   ngOnInit(): void {
@@ -36,4 +39,9 @@ export class MostrarProductosComponent {
     },error=>{console.log(error);
   })
   }
+
+  irACrearProducto() {
+    this.router.navigate(['/crear-producto']);
+  }
+
 }

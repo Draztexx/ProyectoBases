@@ -11,13 +11,13 @@ const UsuarioSchema=mongoose.Schema({
     },
     contrasena: {
         type: String,
-        required: trusted,
+        required: true,
     },
     tipo: {
-        type: String,
-        default: "user"
+        type: Boolean,
+        default: false
     }
 
 });
 
-modulr.exports=mongoose.model('Usuario',UsuarioSchema);
+module.exports=mongoose.model('Usuario',UsuarioSchema);

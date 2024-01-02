@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Producto } from 'src/app/models/producto';
+import { Producto } from 'src/app/shared/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
 

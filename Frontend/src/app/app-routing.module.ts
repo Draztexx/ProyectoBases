@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', component: MostrarProductosComponent},
   { path: 'crear-producto', component:CrearProductoComponent},
   { path: 'editar-producto/:id', component:CrearProductoComponent},
+  { path: 'search/:searchTerm', component:MostrarProductosComponent},
   { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

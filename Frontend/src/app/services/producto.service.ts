@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Producto } from '../shared/models/producto';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,12 @@ export class ProductoService{
 
   editarProducto(id: string, producto: Producto): Observable<any>{
     return this.http.put(this.url+id,producto);
+  }
+
+  getProductosBySearch(searchTerm:string): Observable<Producto[]> {
+    return this.getProductos().pipe(
+      map((productos: Producto[]) => productos.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())))
+    );
   }
 }
 

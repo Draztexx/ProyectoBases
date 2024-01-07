@@ -43,7 +43,10 @@ export class CrearProductoComponent implements OnInit{
     const PRODUCTO: Producto={
       nombre:this.productoForm.get('producto')?.value,
       categoria:this.productoForm.get('categoria')?.value,
-      precio:this.productoForm.get('precio')?.value
+      precio:this.productoForm.get('precio')?.value,
+      tags:this.productoForm.get('tags')?.value,
+      url:this.productoForm.get('url')?.value,
+      disponible:this.productoForm.get('disponible')?.value
 
     }
 
@@ -78,6 +81,9 @@ export class CrearProductoComponent implements OnInit{
           producto: data.nombre,
           categoria: data.categoria,
           precio: data.precio,
+          tags: data.tags,
+          url: data.url,
+          disponible: data.url,
         })
       })
     }

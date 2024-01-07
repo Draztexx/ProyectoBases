@@ -24,18 +24,17 @@ export class ProductoService{
     return this.http.post(this.url,producto);
   }
 
-  obtenerProducto(id: String): Observable<any>{
-    return this.http.get(this.url +id)
+  obtenerProducto(id: String): Observable<Producto>{
+    return this.http.get<Producto>(this.url +id)
   }
 
   editarProducto(id: string, producto: Producto): Observable<any>{
     return this.http.put(this.url+id,producto);
   }
 
-  getProductosBySearch(searchTerm:string): Observable<Producto[]> {
-    return this.getProductos().pipe(
-      map((productos: Producto[]) => productos.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())))
-    );
+  getProductosBySearch(searchTerm:string): Observable<any> {
+    return this.getProductos().pipe(map((productos: Producto[]) => productos.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()))));
+    
   }
 }
 

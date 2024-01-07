@@ -16,6 +16,8 @@ import { LatizquierdoComponent } from './components/latizquierdo/latizquierdo.co
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarProductosComponent } from './components/pages/mostrar-productos/mostrar-productos.component';
 import { RouterModule } from '@angular/router';
+import { SearchComponent } from './components/partials/search/search.component';
+import { ProductoPageComponent } from './components/pages/producto-page/producto-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { RouterModule } from '@angular/router';
     RegisterComponent,
     CarritoComponent,
     LatizquierdoComponent,
+    SearchComponent,
+    ProductoPageComponent,
     
   ],
   imports: [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../../shared/models/producto';
 import { ActivatedRoute } from '@angular/router';
 import { ProductoService } from '../../../services/producto.service';
+import { CarritoService } from '../../../services/carrito.service';
 
 @Component({
   selector: 'app-producto-page',
@@ -12,7 +13,7 @@ export class ProductoPageComponent implements OnInit{
 
   producto?: Producto;
 
-  constructor(private activatedRoute:ActivatedRoute,private productoService:ProductoService){
+  constructor(private activatedRoute:ActivatedRoute,private productoService:ProductoService,private carritoService:CarritoService){
     
   }
 
@@ -30,5 +31,13 @@ export class ProductoPageComponent implements OnInit{
       }
     })
   }
+
+
+  addToCarrito(){
+    if (this.producto) {
+      this.carritoService.addToCarrito(this.producto);
+    } else {
+      console.error('El producto es undefined. No se puede agregar al carrito.');
+    }  } 
 
 }

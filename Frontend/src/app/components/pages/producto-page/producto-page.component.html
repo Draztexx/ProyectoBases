@@ -20,7 +20,7 @@
         <div class="precio">
             {{producto?.precio | currency: 'EUR'}}
         </div>
-        <button>Añadir al carrito</button>
+        <button (click)="addToCarrito()">Añadir al carrito</button>
     </div>
 </div>
 </ul>

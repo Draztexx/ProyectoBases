@@ -1,4 +1,70 @@
 <div class="carrito-container">
   <h2 class="carrito-title">Tu Carrito</h2>
-  <button class="finalizar-compra-button" (click)="finalizarCompra()">Finalizar Compra</button>
+  
+    <ul>
+      <li *ngFor="let carritoItem of carrito.items">
+        <div>
+          <img [src]="carritoItem.producto.url" [alt]="carritoItem.producto.nombre">
+        </div>
+        <div>
+          <a routerLink="/producto/{{carritoItem.producto._id}}">
+            {{carritoItem.producto.nombre}}
+          </a>
+        </div>
+        <div>
+          {{carritoItem.cantidad}}
+        </div>
+        <div>
+          {{carritoItem.precio | currency: 'EUR'}}
+        </div>
+        <div>
+          <button class="remove-button" (click)="removeFromCarrito(carritoItem)">
+            ELIMINAR
+          </button>
+        </div>
+      </li>
+    </ul>
+    <div class="checkout">
+      <div class="producto-cantidad">{{carrito.cantidadTotal}}</div>
+      <div class="precio-total">{{carrito.precioTotal | currency: 'EUR'}}</div>
+    </div>
+    <button class="finalizar-compra-button" (click)="finalizarCompra()">Finalizar Compra</button>
+
+ <!-- <button class="finalizar-compra-button" (click)="finalizarCompra()">Finalizar Compra</button>-->
 </div>
+
+
+<!--
+<div class="container">
+  <ul>
+    <li *ngFor="let carritoItem of carrito.items">
+      <div>
+        <img [src]="carritoItem.producto.url" [alt]="carritoItem.producto.nombre">
+      </div>
+      <div>
+        <a routerLink="/producto/{{carritoItem.producto._id}}">
+          {{carritoItem.producto.nombre}}
+        </a>
+      </div>
+      <div>
+        <select #cantidadSelect [value]="carritoItem.cantidad" (change)="changeCantidad(carritoItem,cantidadSelect.value)">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+
+      </div>
+      <div>
+        {{carritoItem.precio | currency: 'EUR'} }
+      </div>
+      <div>
+        <button class="remove-button" (click)="removeFromCarrito(carritoItem)">
+          ELIMINAR
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+-->

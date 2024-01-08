@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  [x: string]: any;
   showLogin: boolean = false;
   showRegister: boolean = false;
   showCarrito: boolean = false;
+  constructor(private _productoService: ProductoService) {}
 
   toggleLogin() {
     this.showLogin = !this.showLogin;
@@ -44,5 +47,8 @@ toggleCarrito() {
     if (exclude !== 'carrito') {
       this.showCarrito = false;
     }
+  }
+  mostrarTodos() {
+    this._productoService.getProductos();
   }
 }

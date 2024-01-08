@@ -1,9 +1,10 @@
 <!-- header.component.html -->
 
 <header>
-  <div class="logo">
+  <a [routerLink]="['/']" class="logo">
     <img src="assets/LogoBalloon.png" alt="Logo Balloon">
-  </div>
+  </a>
+
 
   <div class="user-cart-icons">
     <i class="fas fa-user" (click)="toggleLogin()"></i>

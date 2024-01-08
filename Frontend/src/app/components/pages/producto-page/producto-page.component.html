@@ -1,0 +1,26 @@
+<ul>
+<div class="container">
+    <img [src]="producto?.url" [alt]="producto?.nombre"/>
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{producto?.nombre}}
+            </span>
+        </div>
+        <div class="categoria">
+            <span >
+                {{producto?.categoria}}
+            </span>
+        </div>
+        <div class="tags">
+            <span *ngFor="let tag of producto?.tags">
+                {{tag}}
+            </span>
+        </div>
+        <div class="precio">
+            {{producto?.precio | currency: 'EUR'}}
+        </div>
+        <button (click)="addToCarrito()">Añadir al carrito</button>
+    </div>
+</div>
+</ul>

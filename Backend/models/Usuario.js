@@ -5,13 +5,21 @@ const UsuarioSchema=mongoose.Schema({
         type: String,
         required:true
     },
-    correo: {
+    apellidos:{
+        type: String,
+        required:true
+    },
+    email: {
         type: String,
         required:true
     },
     contrasena: {
         type: String,
         required: true,
+    },
+    direccion:{
+        type: String,
+        required:true,
     },
     tipo: {
         type: Boolean,

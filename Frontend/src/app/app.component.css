@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  app-latizquierdo {
+    /* Estilos para tu componente app-latizquierdo */
+  }
+  
+  .router-outlet-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

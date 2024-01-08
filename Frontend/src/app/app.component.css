@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    margin: 0;
+  }
+  
+  app-latizquierdo {
+    flex: 0 0 100px; /* Establece el ancho automático para la columna izquierda */
+    margin-right: 100px;
+  }
+  
+  
+  /* Estilos adicionales si es necesario */
+  app-header, app-footer {
+    width: 100%;
+  }
+  

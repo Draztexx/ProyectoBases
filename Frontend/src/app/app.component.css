@@ -1,19 +1,22 @@
-body, html {
-    height: 100%;
+body,html {
+    display: flex;
     margin: 0;
+    height: 100%;
   }
-  
-  .main-container {
+  app-latizquierdo {
+    flex: 0 0 100px; /* Establece el ancho automático para la columna izquierda */
+    margin-right: 100px;
+  }
+  /* Estilos adicionales si es necesario */
+  app-header, app-footer {
+    width: 100%;
+  }
+  .main-container{
     display: flex;
     height: 100%;
   }
-  
-  app-latizquierdo {
-    /* Estilos para tu componente app-latizquierdo */
-  }
-  
-  .router-outlet-container {
-    flex: 1;
+  .router-outlet-container{
+    flex:1;
     display: flex;
     justify-content: center;
     align-items: center;

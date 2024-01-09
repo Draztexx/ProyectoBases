@@ -10,7 +10,7 @@
             <div *ngFor="let producto of listProductos" class="col-md-4 col-sm-6 mb-4">
               <div class="card">
                 <img [src]="producto.imagenUrl" class="card-img-top" alt="{{producto.nombre}}">
-                
+
                 <div class="card-body">
                   <h5 class="card-title">{{producto.nombre}}</h5>
                   <p class="card-text">descripcion</p>
@@ -33,9 +33,9 @@
   </div>
 </div>
 -->
-
-<app-search></app-search>
-
+<div>
+  <app-search></app-search>
+</div>
 <ul>
   <li *ngFor="let producto of listProductos">
     <a routerLink="/producto/{{producto._id}}">

@@ -1,27 +1,28 @@
 <div class="lateral-izquierdo-container">
   <h5>Categorías</h5>
-
-  <!-- Lista de Categorías -->
   <ul class="categorias-lista">
-    <li><a href="#">Americana</a></li>
-    <li><a href="#">Árabe</a></li>
-    <li><a href="#">Española</a></li>
-    <li><a href="#">Italiana</a></li>
-    <li><a href="#">Asiática</a></li>
+    <li><a (click)="mostrarTodos()">Mostrar Todos</a></li>
+    <li><a (click)="filtrarPorCategoria('india')">Hindú</a></li>
+    <li><a (click)="filtrarPorCategoria('germany')">Alemana</a></li>
+    <li><a (click)="filtrarPorCategoria('italy')">Italiana</a></li>
+    <li><a (click)="filtrarPorCategoria('persia')">Persa</a></li>
+    <li><a (click)="filtrarPorCategoria('belgium')">Belga</a></li>
   </ul>
-
+<br>
+<br>
   <h5>Ordenar por:</h5>
 
   <div class="ordenar-opciones">
     <label><input type="radio" name="ordenar" value="asc"> A-Z</label>
     <label><input type="radio" name="ordenar" value="desc"> Z-A</label>
   </div>
-
+<br>
+<br>
   <h5>Filtrar por Precio</h5>
-
-  <!-- Filtro de Precio -->
   <div class="filtro-precio">
     <label for="rango-precio">Rango de Precio:</label>
-    <input type="range" id="rango-precio" name="rango-precio" min="0" max="100" step="10" value="50"><span id="valor-precio">0€ - 100€</span>
+    <input type="range" id="rango-precio" name="rango-precio" min="0" max="100" step="5" [(ngModel)]="valorRango" (input)="actualizarValorPrecio()">
+    <span id="valor-precio">0€ - {{ valorRango }}€</span>
   </div>
 </div>
+

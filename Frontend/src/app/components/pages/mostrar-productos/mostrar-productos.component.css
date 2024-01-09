@@ -1,13 +1,17 @@
 
-
-ul{
-    display: flex;
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     list-style-type: none;
-    padding: 0;
-}
+    width: 100%;
+  }
+
+  li {
+    box-sizing: border-box;
+  }
 
 li a{
     height: 22.5rem ;

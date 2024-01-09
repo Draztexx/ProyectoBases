@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'crear-producto', component:CrearProductoComponent},
   { path: 'editar-producto/:id', component:CrearProductoComponent},
   { path: 'producto/:id', component:ProductoPageComponent},
-  { path: 'login', component:LoginPageComponent}
+  { path: 'login', component:LoginPageComponent,data:{login:true}}
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

@@ -1,23 +1,60 @@
 body,html {
-    display: flex;
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   }
   app-latizquierdo {
     flex: 0 0 100px; /* Establece el ancho automático para la columna izquierda */
-    margin-right: 100px;
+    margin-right: 20px;
   }
   /* Estilos adicionales si es necesario */
-  app-header, app-footer {
+  .app-header, .main-container, .app-footer {
     width: 100%;
-  }
-  .main-container{
-    display: flex;
-    height: 100%;
-  }
-  .router-outlet-container{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+.main-container {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+.router-outlet-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-footer {
+  width: 100%;
+  background-color: #f1f1f1;
+  margin-top: auto;
+}
+
+/* Estilos adicionales específicos para el componente de login */
+.main-container.login-page {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 900;
+}
+
+.router-outlet-container.login-page {
+  position: static; /* Restaura la posición predeterminada para el contenido de login */
+  display: block; /* Restaura la posición predeterminada para el contenido de login */
+  background-color: transparent; 
+
+}
+
+.login-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+/* Otros estilos según sea necesario */

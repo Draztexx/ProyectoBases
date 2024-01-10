@@ -13,7 +13,7 @@ const UsuarioSchema=mongoose.Schema({
         type: String,
         required:true
     },
-    contrasena: {
+    password: {
         type: String,
         required: true,
     },

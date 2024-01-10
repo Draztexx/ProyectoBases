@@ -34,7 +34,7 @@ exports.actualizarProducto = async(req,res)=>{
 
         if(!producto){
             res.status(404).json({msg: "No existe el producto"});
-        }
+        }else{
 
         producto.nombre=nombre;
         producto.categoria=categoria;
@@ -42,6 +42,7 @@ exports.actualizarProducto = async(req,res)=>{
 
         producto= await Producto.findOneAndUpdate({_id: req.params.id },producto,{new: true});
         res.json(producto);
+        }
 
     }catch(error){
         console.log(error);

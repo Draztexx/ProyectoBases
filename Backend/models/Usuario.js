@@ -5,15 +5,11 @@ const UsuarioSchema=mongoose.Schema({
         type: String,
         required:true
     },
-    apellidos:{
-        type: String,
-        required:true
-    },
     email: {
         type: String,
         required:true
     },
-    password: {
+    passwordHash: {
         type: String,
         required: true,
     },
@@ -26,6 +22,15 @@ const UsuarioSchema=mongoose.Schema({
         default: false
     }
 
-});
+})
+
+UsuarioSchema.set('toObject',{
+    transform:(document, returnedObject)=>{
+    returnedObject.id=returnedObject._id
+    delete returnedObject._id
+    delete returnedObject.passwordHash
+    delete returnedObject.__v
+    }
+})
 
 module.exports=mongoose.model('Usuario',UsuarioSchema);

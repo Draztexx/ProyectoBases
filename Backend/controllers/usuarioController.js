@@ -1,13 +1,25 @@
 const Usuario = require("../models/Usuario");
+const bcrypt = require("bcrypt")
 
 exports.crearUsuario=async(req,res)=>{
     try{
-        let usuario;
+        const {nombre,email,password,direccion,tipo}=req.body;
 
-        usuario=new Usuario(req.body);
+        const saltRounds=10;
+        const passwordHash=await bcrypt.hash(password,saltRounds);
+
+        let usuario=new Usuario({
+            nombre,
+            email,
+            passwordHash,
+            direccion,
+            tipo
+        });
 
         await usuario.save();
-        res.send(usuario);
+        usuario = usuario.toObject();
+        //delete usuario.passwordHash;
+        res.json(usuario);
 
     }catch(error){
         console.log(error)

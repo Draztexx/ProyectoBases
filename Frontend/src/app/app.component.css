@@ -4,10 +4,10 @@ body,html {
     height: 100%;
   }
   app-latizquierdo {
-    flex: 0 0 100px; /* Establece el ancho automático para la columna izquierda */
+    flex: 0 0 100px;
     margin-right: 100px;
   }
-  /* Estilos adicionales si es necesario */
+
   app-header, app-footer {
     width: 100%;
   }

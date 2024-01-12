@@ -18,6 +18,7 @@ import { MostrarProductosComponent } from './components/pages/mostrar-productos/
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './components/partials/search/search.component';
 import { ProductoPageComponent } from './components/pages/producto-page/producto-page.component';
+import { LatderechoComponent } from './components/latderecho/latderecho.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProductoPageComponent } from './components/pages/producto-page/producto
     LatizquierdoComponent,
     SearchComponent,
     ProductoPageComponent,
+    LatderechoComponent,
     
   ],
   imports: [

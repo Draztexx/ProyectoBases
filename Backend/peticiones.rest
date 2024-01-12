@@ -37,3 +37,16 @@ GET http://localhost:4000/api/productos/656e362de91db881744f6d51
 ###
 
 DELETE http://localhost:4000/api/productos/65775c49246c0cc50cd6ff9f
+
+###
+
+POST http://localhost:4000/api/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Raul",
+    "email": " Raul@gmail.com",
+    "password": "1234",
+    "direccion":"c/aslda",
+    "tipo":true
+}

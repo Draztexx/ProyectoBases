@@ -1,5 +1,5 @@
 <div>
     <input #s type="text" placeholder="Buscador" 
-    (keyup)="search(s.value)"/>
+    (keyup.enter)="search(s.value)"/>
     <button (click)="search(s.value)">SEARCH</button>
 </div>    

@@ -1,9 +1,18 @@
-<app-header></app-header>
-<div class="main-container">
-<app-latizquierdo></app-latizquierdo>
-<div class="router-outlet-container">
-  <router-outlet></router-outlet>
-</div>
-<app-latderecho></app-latderecho>
-</div>
-<app-footer></app-footer>
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+
+    <app-header></app-header>
+
+    <div class="main-container" [ngClass]="{ 'login-page': isLoginPageComponent }">
+        <app-latizquierdo></app-latizquierdo>
+        <div class="router-outlet-container" [ngClass]="{ 'login-page': isLoginPageComponent }">
+          <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+
+</body>
+</html>

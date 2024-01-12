@@ -5,6 +5,8 @@ import { ListarProductosComponent } from './components/listar-productos/listar-p
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { MostrarProductosComponent } from './components/pages/mostrar-productos/mostrar-productos.component';
 import { ProductoPageComponent } from './components/pages/producto-page/producto-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 
 const routes: Routes = [
  // { path: '', component: ListarProductosComponent},
@@ -14,6 +16,7 @@ const routes: Routes = [
   { path: 'crear-producto', component:CrearProductoComponent},
   { path: 'editar-producto/:id', component:CrearProductoComponent},
   { path: 'producto/:id', component:ProductoPageComponent},
+  { path: 'login', component:LoginPageComponent,data:{login:true}}
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

@@ -5,7 +5,7 @@ export class Producto{
     precio!: number;
     tags?: string[];
     url!: string;
-    disponible !: boolean;  
+    disponible !: boolean;
 
     constructor(nombre: string, categoria: string, precio: number, tags: string[],url:string, disponible:boolean){
         this.nombre=nombre;
@@ -17,6 +17,6 @@ export class Producto{
     }
 
 
-    
+
 
 }

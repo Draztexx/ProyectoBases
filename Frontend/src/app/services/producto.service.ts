@@ -52,32 +52,6 @@ export class ProductoService {
     );
   }
 
-  getProductosByCategoria(categoria: string): Observable<Producto[]> {
-    if (categoria === '') {
-      return this.getProductos()
-    }else{
-      return this.getProductos().pipe(
-        map((productos: Producto[]) =>
-          productos.filter(producto =>
-            producto.categoria.toLowerCase()==(categoria.toLowerCase())
-          )
-        )
-      );
-    }
-  }
-
-
-  getProductosByRangoPrecio(n:number): Observable<Producto[]> {
-    return this.rangoPrecio$.pipe(
-      switchMap(max =>
-        this.getProductos().pipe(
-          map((productos: Producto[]) =>
-            productos.filter(producto => producto.precio < max)
-          )
-        )
-      )
-    );
-  }
   setCategoriaSeleccionada(categoria: string) {
     this.categoriaSeleccionadaSubject.next(categoria);
   }
@@ -119,6 +93,19 @@ getProductosFiltrados(): Observable<Producto[]> {
       });
 
       return productosFiltrados;
+    })
+  );
+}
+obtenerUltimosDosProductos(): Observable<Producto[]> {
+  return this.getProductos().pipe(
+    map((productos: Producto[]) => {
+      const productosOrdenados = productos.sort((a, b) => {
+        const fechaA = new Date(a).getTime();
+        const fechaB = new Date(b).getTime();
+        return fechaB - fechaA;
+      });
+
+      return productosOrdenados.slice(0, 2);
     })
   );
 }

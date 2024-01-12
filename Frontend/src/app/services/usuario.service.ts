@@ -8,7 +8,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UsuarioService {
-  url='http://localhost:4000/api/login/'
+  url='http://localhost:4000/api/usuarios/'
   private usuarioSubject = new BehaviorSubject<Usuario>(new Usuario()); 
   public usuariObservable:Observable<Usuario>;
   constructor(private http:HttpClient) { 

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/models/usuario';
 import  { UsuarioService } from 'src/app/services/usuario.service';
 
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',

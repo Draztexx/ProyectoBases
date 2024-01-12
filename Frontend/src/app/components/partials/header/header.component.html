@@ -1,11 +1,9 @@
 <!-- header.component.html -->
 
 <header>
-  <a [routerLink]="['/']" class="logo">
+  <a (click)="mostrarTodos()" class="logo">
     <img src="assets/LogoBalloon.png" alt="Logo Balloon">
   </a>
-
-
   <div class="user-cart-icons">
     <i class="fas fa-user" (click)="toggleLogin()"></i>
     <i class="fas fa-shopping-cart" (click)="toggleCarrito()"></i>

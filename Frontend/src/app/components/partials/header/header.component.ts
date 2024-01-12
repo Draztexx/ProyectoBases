@@ -48,7 +48,8 @@ toggleCarrito() {
       this.showCarrito = false;
     }
   }
+  
   mostrarTodos() {
-    this._productoService.getProductos();
+    this._productoService.setCategoriaSeleccionada('');
   }
 }

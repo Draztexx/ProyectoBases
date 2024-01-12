@@ -1,7 +1,7 @@
-// latizquierdo.component.ts
-
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductoService } from 'src/app/services/producto.service';
+import { Producto } from 'src/app/shared/models/producto';
 
 @Component({
   selector: 'app-latizquierdo',
@@ -9,19 +9,39 @@ import { ProductoService } from 'src/app/services/producto.service';
   styleUrls: ['./latizquierdo.component.css'],
 })
 export class LatizquierdoComponent {
-  valorRango: number = 50;
+  valorRango: number = 100;
+  listProductos: Producto[] = [];
 
-  constructor(private _productoService: ProductoService) {}
+  constructor(private _productoService: ProductoService, private router: Router) {}
 
   actualizarValorPrecio() {
     this._productoService.setRangoPrecio(this.valorRango);
+    this.actualizarProductos();
   }
 
   filtrarPorCategoria(categoria: string) {
     this._productoService.setCategoriaSeleccionada(categoria);
+    this.actualizarProductos();
   }
 
   mostrarTodos() {
     this._productoService.setCategoriaSeleccionada('');
+    this.actualizarProductos();
+  }
+
+  cambiarOrdenacion(ordenacion: string) {
+    this._productoService.setOrdenacion(ordenacion);
+    this.actualizarProductos();
+  }
+
+  private actualizarProductos() {
+    this._productoService.getProductosFiltrados().subscribe(
+      (data: Producto[]) => {
+        this.listProductos=data
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
   }
 }

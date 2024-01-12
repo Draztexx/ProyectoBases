@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/shared/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
-import { Subscription } from 'rxjs';
+import { Subscription, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-mostrar-productos',
@@ -13,10 +13,11 @@ import { Subscription } from 'rxjs';
 export class MostrarProductosComponent implements OnInit {
   listProductos: Producto[] = [];
   categoriaSeleccionada: string = '';
-  valorRango: number = 50;
+  valorRango: number = 100;
 
   private categoriaSubscription: Subscription;
   private rangoPrecioSubscription: Subscription;
+  private ordenacionSubscription: Subscription;
 
   constructor(
     private _productoService: ProductoService,
@@ -33,28 +34,34 @@ export class MostrarProductosComponent implements OnInit {
       this.valorRango = rangoPrecio;
       this.obtenerProductos();
     });
-  }
 
-  ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm) {
-        this._productoService.getProductosBySearch(params.searchTerm).subscribe(
-          (productos: Producto[]) => {
-            this.listProductos = productos;
-          },
-          (error) => {
-            console.error(error);
-          }
-        );
-      } else {
-        this.categoriaSeleccionada = params.categoria || '';
-        this.obtenerProductos();
-      }
+    this.ordenacionSubscription = this._productoService.ordenacion$.subscribe((ordenacion: string) => {
+      this.obtenerProductos();
     });
   }
 
+  ngOnInit(): void {
+    this.activatedRoute.params.pipe(
+      switchMap(params => {
+        if (params.searchTerm) {
+          return this._productoService.getProductosBySearch(params.searchTerm);
+        } else {
+          this.categoriaSeleccionada = params.categoria || '';
+          return this._productoService.getProductosFiltrados();
+        }
+      })
+    ).subscribe(
+      (productos: Producto[]) => {
+        this.listProductos = productos;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
   obtenerProductos() {
-    this._productoService.getProductosByCategoria(this.categoriaSeleccionada).subscribe(
+    this._productoService.getProductosFiltrados().subscribe( // Cambio aquí
       (data: Producto[]) => {
         this.listProductos = data;
       },
@@ -64,13 +71,9 @@ export class MostrarProductosComponent implements OnInit {
     );
   }
 
-  actualizarValorPrecio() {
-    this.obtenerProductos();
-  }
-
   ngOnDestroy() {
-
     this.categoriaSubscription.unsubscribe();
     this.rangoPrecioSubscription.unsubscribe();
+    this.ordenacionSubscription.unsubscribe();
   }
 }

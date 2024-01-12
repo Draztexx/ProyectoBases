@@ -9,6 +9,9 @@ ul {
     width: 100%;
   }
 
+  app-search{
+    position:static;
+  }
   li {
     box-sizing: border-box;
   }

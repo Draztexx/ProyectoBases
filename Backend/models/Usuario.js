@@ -27,7 +27,9 @@ const UsuarioSchema=mongoose.Schema({
 UsuarioSchema.set('toObject',{
     transform:(document, returnedObject)=>{
     returnedObject.id=returnedObject._id
+    delete returnedObject.email
     delete returnedObject._id
+    delete returnedObject.id
     delete returnedObject.passwordHash
     delete returnedObject.__v
     }

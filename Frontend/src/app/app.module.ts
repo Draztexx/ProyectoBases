@@ -35,6 +35,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
     LatizquierdoComponent,
     SearchComponent,
     ProductoPageComponent,
+    LoginPageComponent,
     
   ],
   imports: [

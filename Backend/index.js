@@ -1,5 +1,6 @@
 const express = require('express');
 const conectarDB= require('./config/db');
+const cookieParser = require('cookie-parser');
 const cors= require("cors");
 
 //Creamos el servidor
@@ -10,6 +11,10 @@ conectarDB();
 app.use(cors())
 
 app.use(express.json());
+app.use(cookieParser());
+
+
+
 
 //Definimos una ruta principal
 

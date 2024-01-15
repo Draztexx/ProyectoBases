@@ -33,20 +33,24 @@ export class LoginPageComponent implements OnInit{
 
   
   submit(){
-    /*
-    const USUARIO: Usuario={
-      nombre:
-    }
-
-    this.isSubmitted=true;
-    if(this.loginForm.invalid){
+    this.isSubmitted = true;
+    if (this.loginForm.invalid) {
       return;
     }
-      alert(`email: ${this.fc.email.value},password: ${this.fc.password.value}`)
-      console.log(this.loginForm);
-      
-      this._usuarioService.login()
-     */
+  
+    const usuario = {
+      email: this.fc.email.value,
+      password: this.fc.password.value
+    };
+  
+    this._usuarioService.login(usuario).subscribe(
+      (response) => {
+        this._usuarioService.guardarCookie(response);
+      },
+      (error) => {
+        console.error(error);  // Puedes manejar el error del backend aquí
+      }
+    );
   }
  
 

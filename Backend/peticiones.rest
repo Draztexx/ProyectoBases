@@ -45,8 +45,22 @@ Content-Type: application/json
 
 {
     "nombre": "Raul",
-    "email": " Raul@gmail.com",
+    "email": "Raul@gmail.com",
     "password": "1234",
     "direccion":"c/aslda",
-    "tipo":true
+    "tipo":false
 }
+
+
+###
+POST  http://localhost:4000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "Raul@gmail.com",
+    "password": "1234"
+}
+
+###
+POST  http://localhost:4000/api/usuarios/logout
+

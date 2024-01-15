@@ -1,11 +1,70 @@
-<div class="register-container">
-  <h2 class="register-title">Registro</h2>
-  <form class="register-form">
-    <input type="text" class="register-input" placeholder="Nombre de Usuario">
-    <input type="email" class="register-input" placeholder="Correo Electrónico">
-    <input type="password" class="register-input" placeholder="Contraseña">
-    <button type="button" class="register-button" (click)="register()">Registrar</button>
-    <br>
-    <button type="button" class="register-button" (click)="loginClick()">Iniciar Sesión</button>
-  </form>
+<div class="register">
+  <div class="details">
+    <div class="titulo">REGISTER</div>
+      <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <div class="input-container">
+          <label>Nombre</label>
+          <div>
+              <input type="nombre" placeholder="Nombre" formControlName="nombre"/>
+          </div>
+        
+          <div class="error-list" *ngIf="fc.nombre.errors">
+              <div *ngIf="fc.nombre.errors">El email no es correcto</div>
+          </div>
+
+        </div>
+
+        <div class="input-container">
+          <label>Email</label>
+          <div>
+              <input type="email" placeholder="Email" formControlName="email"/>
+          </div>
+        
+          <div class="error-list" *ngIf="fc.email.errors">
+              <div *ngIf="fc.email.errors.required">No puede estar vacio</div>
+              <div *ngIf="fc.email.errors">El email no es correcto</div>
+          </div>
+
+        </div>
+        <div class="input-container">
+          <label>Password</label>
+          <div>
+              <input type="password" placeholder="Password" formControlName="passwordHash"/>
+          </div>
+          <div class="error-list" *ngIf="fc.passwordHash.errors">
+              <div *ngIf="fc.passwordHash.errors.required">La password no puede estar vacia</div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <label>Direccion</label>
+          <div>
+              <input type="direccion" placeholder="Direccion" formControlName="direccion"/>
+          </div>
+        
+          <div class="error-list" *ngIf="fc.direccion.errors">
+              <div *ngIf="fc.direccion.errors">El email no es correcto</div>
+          </div>
+
+        </div>
+        <div class="input-container">
+          <label>Tipo</label>
+          <div>
+              <input type="tipo" placeholder="Tipo" formControlName="tipo"/>
+          </div>
+        
+          <div class="error-list" *ngIf="fc.tipo.errors">
+              <div *ngIf="fc.tipo.errors">El email no es correcto</div>
+          </div>
+
+        </div>
+      
+        <div class="button">
+          <button type="submit">Login</button>
+        
+        </div>
+      </form>
+     
+  
+  
 </div>

@@ -1,4 +1,4 @@
-<div class="register">
+<div class="container">
   <div class="details">
     <div class="titulo">REGISTER</div>
       <form [formGroup]="registerForm" (ngSubmit)="submit()">
@@ -29,10 +29,10 @@
         <div class="input-container">
           <label>Password</label>
           <div>
-              <input type="password" placeholder="Password" formControlName="passwordHash"/>
+              <input type="password" placeholder="Password" formControlName="password"/>
           </div>
-          <div class="error-list" *ngIf="fc.passwordHash.errors">
-              <div *ngIf="fc.passwordHash.errors.required">La password no puede estar vacia</div>
+          <div class="error-list" *ngIf="fc.password.errors">
+              <div *ngIf="fc.password.errors.required">La password no puede estar vacia</div>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
               <input type="direccion" placeholder="Direccion" formControlName="direccion"/>
           </div>
         
-          <div class="error-list" *ngIf="fc.direccion.errors">
+          <div class="error-list" *ngIf="fc.direccion.errors ">
               <div *ngIf="fc.direccion.errors">El email no es correcto</div>
           </div>
 
@@ -60,7 +60,7 @@
         </div>
       
         <div class="button">
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
         
         </div>
       </form>

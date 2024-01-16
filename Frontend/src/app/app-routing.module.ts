@@ -8,6 +8,7 @@ import { ProductoPageComponent } from './components/pages/producto-page/producto
 import { LoginComponent } from './components/login/login.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { FinalizarcompraComponent } from './components/pages/finalizarcompra/finalizarcompra.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
  // { path: '', component: ListarProductosComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'editar-producto/:id', component:CrearProductoComponent},
   { path: 'producto/:id', component:ProductoPageComponent},
   { path: 'usuarios/login', component:LoginPageComponent,data:{login:true}},
+  { path: 'usuarios/register',component:RegisterComponent,data:{register:true}},
   { path: 'finalizarcompra',component:FinalizarcompraComponent}
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];

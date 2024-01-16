@@ -33,6 +33,7 @@ app-footer {
 }
 
 /* Estilos adicionales específicos para el componente de login */
+.main-container.register,
 .main-container.login-page {
 
   display: flex;
@@ -42,6 +43,7 @@ app-footer {
   z-index: 900;
 }
 
+.router-outlet-container.register,
 .router-outlet-container.login-page {
   position: static; /* Restaura la posición predeterminada para el contenido de login */
   display: block; /* Restaura la posición predeterminada para el contenido de login */
@@ -49,6 +51,7 @@ app-footer {
 
 }
 
+.register-modal,
 .login-modal {
   background-color: #fff;
   padding: 20px;
@@ -56,5 +59,7 @@ app-footer {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   z-index: 1100;
 }
+
+
 
 /* Otros estilos según sea necesario */

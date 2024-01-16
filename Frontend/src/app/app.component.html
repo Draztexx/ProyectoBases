@@ -5,9 +5,9 @@
 
     <app-header></app-header>
     
-    <div class="main-container" [ngClass]="{ 'login-page': isLoginPageComponent }">
+    <div class="main-container" [ngClass]="{ 'login-page': isLoginPageComponent || isRegisterComponent}">
         <app-latizquierdo></app-latizquierdo>
-        <div class="router-outlet-container" [ngClass]="{ 'login-page': isLoginPageComponent }">
+        <div class="router-outlet-container" [ngClass]="{ 'login-page': isLoginPageComponent || isRegisterComponent}">
           <router-outlet></router-outlet>
         </div>
     </div>

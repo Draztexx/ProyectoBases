@@ -1,8 +1,9 @@
 export class Usuario{
-    _id!: number;
+    _id?: number;
     nombre!: string;
     email!: string;
     password!: string;
+    direccion!: string;
     tipo!: boolean;
 
   /*  constructor(nombre: string, correo: string, contrasena: string){

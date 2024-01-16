@@ -47,6 +47,7 @@ export class LoginPageComponent implements OnInit{
     this._usuarioService.login(usuario).subscribe(
       (response) => {
         this._usuarioService.guardarCookie(response);
+        localStorage.setItem('Usuario', JSON.stringify(response));
       },
       (error) => {
         console.error(error);  // Puedes manejar el error del backend aquí

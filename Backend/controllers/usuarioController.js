@@ -22,7 +22,9 @@ exports.crearUsuario=async(req,res)=>{
         //delete usuario.passwordHash;
         const token= await createAccessToken({id:usuario.id});
         res.cookie('token',token)
+        
         res.json(usuario);
+
 
     }catch(error){
         console.log(error)
@@ -52,6 +54,7 @@ exports.obtenerUsuario=async(req,res)=>{
         
         res.json({
             nombre: userFound.nombre,
+            email:userFound.email,
             direccion: userFound.direccion,
             tipo: userFound.tipo
         });

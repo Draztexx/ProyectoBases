@@ -10,6 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit{
   isLoginPageComponent = false;
+  isRegisterComponent = false;
 
   constructor(private router: Router) { }
 
@@ -18,6 +19,12 @@ export class AppComponent implements OnInit{
       if (event instanceof NavigationEnd) {
         // Verifica si la ruta actual tiene la propiedad data.login como verdadera
         this.isLoginPageComponent = this.router.routerState.snapshot.root.firstChild?.data?.login === true;
+      }
+    });
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Verifica si la ruta actual tiene la propiedad data.login como verdadera
+        this.isRegisterComponent = this.router.routerState.snapshot.root.firstChild?.data?.register === true;
       }
     });
   }

@@ -19,7 +19,8 @@ app.use(cookieParser());
 //Definimos una ruta principal
 
 app.use('/api/productos', require('./routes/producto'));
-app.use('/api/usuarios',require('./routes/usuario.js'));
+app.use('/api/usuarios',require('./routes/usuario'));
+app.use('/api/finalizarcompra',require('./routes/carrito'));
 /*
 app.get('/',(req,res)=>{
     res.send('HOLA MUNDO');

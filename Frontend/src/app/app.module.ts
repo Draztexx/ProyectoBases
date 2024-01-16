@@ -20,6 +20,7 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { ProductoPageComponent } from './components/pages/producto-page/producto-page.component';
 import { LatderechoComponent } from './components/latderecho/latderecho.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { FinalizarcompraComponent } from './components/pages/finalizarcompra/finalizarcompra.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
     SearchComponent,
     ProductoPageComponent,
     LoginPageComponent,
+    FinalizarcompraComponent,
     
   ],
   imports: [

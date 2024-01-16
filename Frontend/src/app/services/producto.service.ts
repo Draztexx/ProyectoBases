@@ -96,18 +96,5 @@ getProductosFiltrados(): Observable<Producto[]> {
     })
   );
 }
-obtenerUltimosDosProductos(): Observable<Producto[]> {
-  return this.getProductos().pipe(
-    map((productos: Producto[]) => {
-      const productosOrdenados = productos.sort((a, b) => {
-        const fechaA = new Date(a).getTime();
-        const fechaB = new Date(b).getTime();
-        return fechaB - fechaA;
-      });
-
-      return productosOrdenados.slice(0, 2);
-    })
-  );
-}
 
 }

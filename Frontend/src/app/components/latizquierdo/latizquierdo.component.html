@@ -1,12 +1,10 @@
 <div class="lateral-izquierdo-container">
-  <h5>Categorías</h5>
+  <h3 style="text-align: center;">Categorías</h3>
   <ul class="categorias-lista">
     <li><a href="#" (click)="mostrarTodos()">Mostrar Todos</a></li>
-    <li><a href="#" (click)="filtrarPorCategoria('india')">Hindú</a></li>
-    <li><a href="#" (click)="filtrarPorCategoria('germany')">Alemana</a></li>
-    <li><a href="#" (click)="filtrarPorCategoria('italy')">Italiana</a></li>
-    <li><a href="#" (click)="filtrarPorCategoria('persia')">Persa</a></li>
-    <li><a href="#" (click)="filtrarPorCategoria('belgium')">Belga</a></li>
+    <li *ngFor="let categoria of listCategorias">
+      <a href="#" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
+    </li>
   </ul>
 <br>
 <br>

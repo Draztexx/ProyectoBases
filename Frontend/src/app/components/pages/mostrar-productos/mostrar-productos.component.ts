@@ -5,6 +5,7 @@ import { Producto } from 'src/app/shared/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { Subscription, switchMap } from 'rxjs';
 
+
 @Component({
   selector: 'app-mostrar-productos',
   templateUrl: './mostrar-productos.component.html',

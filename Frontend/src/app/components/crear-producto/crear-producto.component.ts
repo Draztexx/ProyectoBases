@@ -13,7 +13,7 @@ import { ProductoService } from 'src/app/services/producto.service';
   styleUrls: ['./crear-producto.component.css']
 })
 export class CrearProductoComponent implements OnInit{
-  productoForm: FormGroup;
+    productoForm: FormGroup;
   titulo='Crear producto';
   id: string | null;
 

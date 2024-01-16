@@ -18,8 +18,9 @@ import { MostrarProductosComponent } from './components/pages/mostrar-productos/
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './components/partials/search/search.component';
 import { ProductoPageComponent } from './components/pages/producto-page/producto-page.component';
-import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { LatderechoComponent } from './components/latderecho/latderecho.component';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { FinalizarcompraComponent } from './components/pages/finalizarcompra/finalizarcompra.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { LatderechoComponent } from './components/latderecho/latderecho.componen
     ProductoPageComponent,
     LoginPageComponent,
     LatderechoComponent,
+    FinalizarcompraComponent,
+    
   ],
   imports: [
     BrowserModule,

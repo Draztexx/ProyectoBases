@@ -1,0 +1,33 @@
+<!-- latderecho.component.html -->
+
+<div class="latderecho-container">
+  <h3 style="text-align: center;">Novedades</h3>
+  <div class="ultimos-productos">
+    <div *ngFor="let producto of novedades" class="producto-container">
+      <br>
+      <a routerLink="/producto/{{producto._id}}" class="producto-link">
+        <div class="producto">
+          <img [src]="producto.url" [alt]="producto.nombre" />
+          <div class="content">
+            <div class="name">
+              {{producto.nombre}}
+            </div>
+            <div class="tags">
+              <span *ngFor="let tag of producto.tags">
+                {{tag}}
+              </span>
+            </div>
+            <div class="categoria">
+              {{producto.categoria}}
+            </div>
+            <div class="precio">
+              {{producto.precio | currency: 'EUR'}}
+            </div>
+          </div>
+        </div>
+        <br>
+
+      </a>
+    </div>
+  </div>
+</div>

@@ -33,31 +33,30 @@
   </div>
 </div>
 -->
-<div>
-  <app-search></app-search>
+<div class="container">
+  <div class="search-container">
+    <app-search></app-search>
+  </div>
+
+  <div class="products-container">
+    <ul class="product-list">
+      <li *ngFor="let producto of listProductos">
+        <a routerLink="/producto/{{producto._id}}" class="product-link">
+          <img [src]="producto.url" [alt]="producto.nombre" />
+          <div class="content">
+            <div class="name">{{producto.nombre}}</div>
+            <div class="tags">
+              <span *ngFor="let tag of producto.tags">{{tag}}</span>
+            </div>
+            <div class="categoria">{{producto.categoria}}</div>
+            <div class="precio">{{producto.precio | currency: 'EUR'}}</div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
-<ul>
-  <li *ngFor="let producto of listProductos">
-    <a routerLink="/producto/{{producto._id}}">
-      <img [src]="producto.url" [alt]="producto.nombre"/>
-      <div class="content">
-        <div class="name">
-          {{producto.nombre}}
-        </div>
-        <div class="tags">
-          <span *ngFor="let tags of producto.tags">
-            {{tags}}
-          </span>
-        </div>
-        <div class="categoria">
-          {{producto.categoria}}
-        </div>
-        <div class="precio">
-          {{producto.precio | currency: 'EUR'}}
-        </div>
-      </div>
-    </a>
-  </li>
-</ul>
+
+
 
 

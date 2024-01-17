@@ -37,6 +37,7 @@ import { FinalizarcompraComponent } from './components/pages/finalizarcompra/fin
     SearchComponent,
     ProductoPageComponent,
     LoginPageComponent,
+    LatderechoComponent,
     FinalizarcompraComponent,
     
   ],

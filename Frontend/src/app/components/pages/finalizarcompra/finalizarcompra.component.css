@@ -1,0 +1,78 @@
+/* finalizarcompra.component.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 40px;  
+    text-align: center;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;  
+    width: 250px;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  .empty-cart-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .table th, .table td {
+      padding: 12px;
+    }
+  
+    button {
+      padding: 12px;
+    }
+  
+    .empty-cart-message {
+      font-size: 16px;
+    }
+  }
+  

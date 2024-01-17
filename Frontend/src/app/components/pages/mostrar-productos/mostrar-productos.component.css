@@ -1,5 +1,17 @@
-
-ul {
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-container {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 10px;
+  }
+  
+  .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -8,17 +20,10 @@ ul {
     list-style-type: none;
     width: 100%;
   }
-
-  app-search{
-    position:static;
-  }
-  li {
-    box-sizing: border-box;
-  }
-
-li a{
-    height: 22.5rem ;
-    width: 20rem;
+  
+  .product-link {
+    height: 22.5rem;
+    width: 15rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -27,26 +32,26 @@ li a{
     overflow: hidden;
     color: #e72929;
     text-decoration: none;
-}
-
-li a:hover{
+  }
+  
+  .product-link:hover {
     opacity: 0.9;
     cursor: pointer;
-}
-
-li a img{
+  }
+  
+  .product-link img {
     object-fit: cover;
     height: 14.5rem;
-}
-
-.content{
+  }
+  
+  .content {
     margin-top: 0.3rem;
     padding: 0.5rem 1rem;
     position: relative;
     height: 7rem;
-}
-
-.tags span{
+  }
+  
+  .tags span {
     border-radius: 2rem;
     background-color: whitesmoke;
     display: inline-block;
@@ -55,9 +60,9 @@ li a img{
     margin-right: 0.3rem;
     padding: 0 0.5rem;
     margin-top: 0.2rem;
-}
-
-.precio{
+  }
+  
+  .precio {
     position: absolute;
     bottom: 0;
     left: 0.9rem;
@@ -66,10 +71,11 @@ li a img{
     color: #414141;
     margin-top: 0.7rem;
     font-size: 1.1rem;
-}
-
-.categoria{
+  }
+  
+  .categoria {
     font-size: 0.9rem;
     flex: 3;
     text-align: right;
-}
+  }
+  

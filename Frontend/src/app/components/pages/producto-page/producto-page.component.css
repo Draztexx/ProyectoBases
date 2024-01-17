@@ -15,8 +15,10 @@ ul{
 }
 
 .container>*{
-    min-width: 25rem;
+    min-width: 23rem;
     max-width: 40rem;
+    max-height: 22rem;
+    min-height: 15rem;
 }
 
 img{

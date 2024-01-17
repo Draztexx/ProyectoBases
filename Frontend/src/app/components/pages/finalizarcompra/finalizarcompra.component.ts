@@ -9,15 +9,18 @@ import { Carrito } from 'src/app/shared/models/carrito';
 })
 export class FinalizarcompraComponent  {
   
+  carrito:Carrito;
   
   constructor(private carritoService: CarritoService){
-
+    this.carrito=carritoService.getCarritoFromLocalStorage()
   }
   
 
 
   agregarCarrito(){
-      this.carritoService.guardarCarrito(); 
+      this.carritoService.guardarCarrito();
+      alert("Compra Finalizada")
+      this.carritoService.clearCart()
 ;
   }
 

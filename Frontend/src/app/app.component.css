@@ -47,7 +47,7 @@ app-footer {
 .router-outlet-container.login-page {
   position: static; /* Restaura la posición predeterminada para el contenido de login */
   display: block; /* Restaura la posición predeterminada para el contenido de login */
-  background-color: transparent; 
+  background-color: transparent;
 
 }
 

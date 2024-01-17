@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Producto } from '../shared/models/producto';
 import { CarritoItem } from '../shared/models/carritoItem';
 import { HttpClient } from '@angular/common/http';
+import { Usuario } from '../shared/models/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,21 @@ export class CarritoService {
       }
     );
   }
+
+ obtenerCarritosporCorreo(usuario:Usuario){
+    console.log(this.carrito);
+  return this.http.post('http://localhost:4000/api/miscompras/correo', usuario)
+    .subscribe(
+      (response) => {
+        console.log('Solicitud POST exitosa:', response);
+      },
+      (error) => {
+        console.error('Error en la solicitud POST:', error);
+      }
+    );
+  }
+
+
 
   addToCarrito(producto:Producto):void{
     let carritoItem=this.carrito.items.find(item=>item.producto._id===producto._id);
@@ -80,7 +96,7 @@ export class CarritoService {
 
   incrementarCantidad(producto: Producto): void {
     const carritoItem = this.carrito.items.find(item => item.producto._id === producto._id);
-  
+
     if (carritoItem) {
       carritoItem.cantidad += 1;
       carritoItem.precio = carritoItem.cantidad * carritoItem.producto.precio;
@@ -89,7 +105,7 @@ export class CarritoService {
       console.error('El producto no está en el carrito.');
       return;
     }
-  
+
     this.setCarritoToLocalStorage();
   }
 

@@ -12,7 +12,6 @@ export class LatizquierdoComponent implements OnInit {
   valorRango: number = 100;
   listProductos: Producto[] = [];
   listCategorias: string[] = [];
-  productos:Producto[]=[]
 
   constructor(private _productoService: ProductoService) {}
 
@@ -52,7 +51,7 @@ export class LatizquierdoComponent implements OnInit {
     );
   }
 
-  
+
   private obtenerCategorias() {
     this._productoService.getProductos().subscribe(
       (data: Producto[]) => {
@@ -63,6 +62,6 @@ export class LatizquierdoComponent implements OnInit {
         console.log(error);
       }
     );
-    
+
   }
 }

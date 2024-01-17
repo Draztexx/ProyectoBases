@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use('/api/productos', require('./routes/producto'));
 app.use('/api/usuarios',require('./routes/usuario'));
 app.use('/api/finalizarcompra',require('./routes/carrito'));
+app.use('/api/miscompras',require('./routes/carrito'));
 /*
 app.get('/',(req,res)=>{
     res.send('HOLA MUNDO');

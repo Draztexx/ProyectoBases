@@ -21,6 +21,7 @@ import { ProductoPageComponent } from './components/pages/producto-page/producto
 import { LatderechoComponent } from './components/latderecho/latderecho.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { FinalizarcompraComponent } from './components/pages/finalizarcompra/finalizarcompra.component';
+import { ListarComprasComponent } from './components/pages/listar-compras/listar-compras.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FinalizarcompraComponent } from './components/pages/finalizarcompra/fin
     LoginPageComponent,
     LatderechoComponent,
     FinalizarcompraComponent,
+    ListarComprasComponent,
     
   ],
   imports: [

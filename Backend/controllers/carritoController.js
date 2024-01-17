@@ -17,7 +17,7 @@ exports.crearCarrito=async(req,res)=>{
 }
 exports.obtenerComprasPorUsuario = async (req, res) => {
     try {
-        let carritos = await Carrito.find({ correo: req.body.correo });
+        let carritos = await Carrito.find({ correo: req.body.email });
         if (carritos.length === 0) {
             return res.status(404).json({ msg: "No hay compras para este usuario" });
         } else {

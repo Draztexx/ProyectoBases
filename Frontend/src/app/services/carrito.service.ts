@@ -28,17 +28,10 @@ export class CarritoService {
     );
   }
 
- obtenerCarritosporCorreo(usuario:Usuario){
+ obtenerCarritosporCorreo(usuario:Usuario):any{
     console.log(this.carrito);
-  return this.http.post('http://localhost:4000/api/miscompras/correo', usuario)
-    .subscribe(
-      (response) => {
-        console.log('Solicitud POST exitosa:', response);
-      },
-      (error) => {
-        console.error('Error en la solicitud POST:', error);
-      }
-    );
+    return this.http.post('http://localhost:4000/api/miscompras/correo', usuario);
+    
   }
 
 

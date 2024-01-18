@@ -9,7 +9,6 @@
     <i class="fas fa-shopping-cart" (click)="toggleCarrito()"></i>
   </div>
 </header>
-
 <app-login *ngIf="showLogin" (onRegisterClick)="onRegisterClick()"></app-login>
 <app-register *ngIf="showRegister" (onLoginClick)="onLoginClick()"></app-register>
 <app-carrito *ngIf="showCarrito"></app-carrito>

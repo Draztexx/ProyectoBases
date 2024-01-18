@@ -1,0 +1,50 @@
+/* listar-compras.component.css */
+
+.container {
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+    margin: auto;
+  }
+  
+  .carrito-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 1200px; /* Ajusta el ancho según sea necesario */
+    margin-right: 150px; /* Ajusta el margen izquierdo según sea necesario */
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    margin-bottom: 15px;
+    color: #3498db;
+  }
+  
+  .carrito-titulo {
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .producto-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .nombre {
+    font-weight: bold;
+  }
+  
+  .total, .cantidad-total {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

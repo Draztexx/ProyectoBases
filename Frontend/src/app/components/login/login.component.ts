@@ -12,7 +12,6 @@ export class LoginComponent {
 
   login() {
 
-    
   }
   registerClick() {
     this.onRegisterClick.emit();

@@ -1,3 +1,26 @@
-<tr *ngFor="let carrito of listacarritos">
-    <td>{{ carrito.cantidadTotal }}</td>
-</tr>
+<div class="container">
+    <br>
+    <h2>Mis Compras</h2>
+    <br>
+    <div *ngIf="listacarritos.length === 0">
+      <p>No hay compras realizadas.</p>
+    </div>  
+    <div *ngFor="let carrito of listacarritos">
+      <div class="carrito-item">
+        <h4 class="carrito-titulo">Detalles del Carrito</h4>
+        <ul>
+          <li *ngFor="let item of carrito.items">
+            <div class="producto-item">
+              <span class="nombre">{{ item.producto.nombre }}</span><br>
+              <span class="cantidad">Cantidad: {{ item.cantidad }}</span><br>
+              <span class="precio">Precio: {{ item.precio }}</span>
+            </div>
+          </li>
+        </ul>
+        <p class="total">Total: {{ carrito.precioTotal }}</p>
+        <p class="cantidad-total">Cantidad Total: {{ carrito.cantidadTotal }}</p>
+      </div>
+    </div>
+  </div>
+  
+

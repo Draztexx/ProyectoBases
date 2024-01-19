@@ -7,6 +7,7 @@
   <div class="user-cart-icons">
     <i class="fas fa-user" (click)="toggleLogin()"></i>
     <i class="fas fa-shopping-cart" (click)="toggleCarrito()"></i>
+    <i class="fa-solid fa-pen-to-square" *ngIf="usuario.tipo==true" routerLink="/admin"></i>
   </div>
 </header>
 <app-login *ngIf="showLogin" (onRegisterClick)="onRegisterClick()"></app-login>

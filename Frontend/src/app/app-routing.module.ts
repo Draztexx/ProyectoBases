@@ -12,7 +12,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { ListarComprasComponent } from './components/pages/listar-compras/listar-compras.component';
 
 const routes: Routes = [
- // { path: '', component: ListarProductosComponent},
   { path: '', component: MostrarProductosComponent},
   { path: 'search/:searchTerm', component:MostrarProductosComponent},
   { path: 'categoria/:categoria', component: MostrarProductosComponent },
@@ -21,9 +20,11 @@ const routes: Routes = [
   { path: 'producto/:id', component:ProductoPageComponent},
   { path: 'usuarios/login', component:LoginPageComponent,data:{login:true}},
   { path: 'usuarios/register',component:RegisterComponent,data:{register:true}},
+<<<<<<< Updated upstream
   { path: 'finalizarcompra',component:FinalizarcompraComponent},
-  { path: 'miscompras',component:ListarComprasComponent}
-  
+  { path: 'miscompras',component:ListarComprasComponent},
+  { path: 'admin', component: ListarProductosComponent}
+>>>>>>> Stashed changes
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

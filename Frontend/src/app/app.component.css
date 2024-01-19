@@ -7,10 +7,9 @@ body,html {
   min-height: 100vh;
   }
   app-latizquierdo {
-    flex: 0 0 100px; /* Establece el ancho automático para la columna izquierda */
+    flex: 0 0 100px;
     margin-right: 20px;
   }
-  /* Estilos adicionales si es necesario */
   .app-header, .main-container, .app-footer {
     width: 100%;
 }
@@ -32,7 +31,6 @@ app-footer {
   margin-top: auto;
 }
 
-/* Estilos adicionales específicos para el componente de login */
 .main-container.register,
 .main-container.login-page {
 
@@ -45,8 +43,8 @@ app-footer {
 
 .router-outlet-container.register,
 .router-outlet-container.login-page {
-  position: static; /* Restaura la posición predeterminada para el contenido de login */
-  display: block; /* Restaura la posición predeterminada para el contenido de login */
+  position: static; 
+  display: block;
   background-color: transparent;
 
 }

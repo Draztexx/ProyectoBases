@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductoService } from 'src/app/services/producto.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { Usuario } from 'src/app/shared/models/usuario';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +10,13 @@ import { ProductoService } from 'src/app/services/producto.service';
 })
 export class HeaderComponent {
   [x: string]: any;
+  usuario:Usuario;
   showLogin: boolean = false;
   showRegister: boolean = false;
   showCarrito: boolean = false;
-  constructor(private _productoService: ProductoService) {}
+  constructor(private _productoService: ProductoService,usuarioService:UsuarioService) {
+    this.usuario=usuarioService.getUsuarioFromLocalStorage()
+  }
 
   toggleLogin() {
     this.showLogin = !this.showLogin;

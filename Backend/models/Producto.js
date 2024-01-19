@@ -23,7 +23,7 @@ const ProductoSchema=mongoose.Schema({
     },
     disponible: {
         type: Boolean,
-        required: true
+        default: true
     },
     fechaCreacion: {
         type: Date,

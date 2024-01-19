@@ -22,11 +22,16 @@ export class CrearProductoComponent implements OnInit{
               private toastr: ToastrService,
               private _productoService: ProductoService,
               private aRouter: ActivatedRoute){
+
+                
          
     this.productoForm=this.fb.group({
         producto: ['',Validators.required],
         categoria: ['',Validators.required],
         precio: ['',Validators.required],
+        tags: ['',Validators.required],
+        url: ['', Validators.required],
+        
 
     })
     this.id=this.aRouter.snapshot.paramMap.get('id')
@@ -39,14 +44,15 @@ export class CrearProductoComponent implements OnInit{
   agregarProducto(){
     //console.log(this.productoForm);
     //console.log(this.productoForm.get('producto')?.value); 
+    const tagsString: string | undefined = this.productoForm.get('tags')?.value;
+    const tagsArray: string[] = tagsString ? tagsString.split(',').map(tag => tag.trim()) : [];
 
     const PRODUCTO: Producto={
       nombre:this.productoForm.get('producto')?.value,
       categoria:this.productoForm.get('categoria')?.value,
       precio:this.productoForm.get('precio')?.value,
-      tags:this.productoForm.get('tags')?.value,
+      tags:tagsArray,
       url:this.productoForm.get('url')?.value,
-      disponible:this.productoForm.get('disponible')?.value
 
     }
 

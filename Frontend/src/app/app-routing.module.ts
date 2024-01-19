@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'usuarios/register',component:RegisterComponent,data:{register:true}},
   { path: 'finalizarcompra',component:FinalizarcompraComponent},
   { path: 'miscompras',component:ListarComprasComponent}
+  
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

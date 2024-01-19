@@ -20,11 +20,10 @@ const routes: Routes = [
   { path: 'producto/:id', component:ProductoPageComponent},
   { path: 'usuarios/login', component:LoginPageComponent,data:{login:true}},
   { path: 'usuarios/register',component:RegisterComponent,data:{register:true}},
-<<<<<<< Updated upstream
   { path: 'finalizarcompra',component:FinalizarcompraComponent},
   { path: 'miscompras',component:ListarComprasComponent},
-  { path: 'admin', component: ListarProductosComponent}
->>>>>>> Stashed changes
+  { path: 'admin',component: ListarProductosComponent}
+
  // { path: '**', redirectTo:'',pathMatch:'full'}
 ];
 

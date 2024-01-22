@@ -60,14 +60,14 @@ export class CrearProductoComponent implements OnInit{
       //editamos producto
       this._productoService.editarProducto(this.id,PRODUCTO).subscribe(data=>{
         this.toastr.success('El Producto fue Registrado con exito', 'Producto Registrado');
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       })
     }else{
       //agregamos
       console.log(PRODUCTO);
       this._productoService.guardarProducto(PRODUCTO).subscribe(data => {
         this.toastr.success('El Producto fue Registrado con exito', 'Producto Registrado');
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       }, error=> {
         console.log(error);
         this.productoForm.reset();

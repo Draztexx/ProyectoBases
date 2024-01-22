@@ -14,14 +14,15 @@ export class CarritoService {
   url='http://localhost:4000/api/finalizarcompra/'
   private carrito:Carrito=this.getCarritoFromLocalStorage();
   private carritoSubject: BehaviorSubject<Carrito>= new BehaviorSubject(this.carrito);
-  private user: Usuario;
-    constructor(private http: HttpClient,UserService:UsuarioService) {
-      this.user=UserService.getUsuarioFromLocalStorage();
-      
+  
+    constructor(private http: HttpClient,private UserService:UsuarioService) {
+
      }  
   guardarCarrito(){
     console.log(this.carrito);
-      this.carrito.correo=this.user.email;
+      const user=this.UserService.getUsuarioFromLocalStorage();
+
+      this.carrito.correo=user.email;
       return this.http.post(this.url, this.carrito)
     .subscribe(
       (response) => {

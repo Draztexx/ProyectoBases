@@ -1,9 +1,9 @@
 <div class="lateral-izquierdo-container">
   <h3 style="text-align: center;">Categorías</h3>
   <ul class="categorias-lista">
-    <li><a href="#" (click)="mostrarTodos()">Mostrar Todos</a></li>
+    <li><a routerLink="/producto" (click)="mostrarTodos()">Mostrar Todos</a></li>
     <li *ngFor="let categoria of listCategorias">
-      <a href="#" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
+      <a  routerLink="/producto" (click)="filtrarPorCategoria(categoria)">{{categoria}}</a>
     </li>
   </ul>
 <br>

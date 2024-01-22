@@ -5,4 +5,5 @@ export class Carrito{
     precioTotal:number=0;
     cantidadTotal:number=0;
     correo:string="";
+    fechaCreacion?:Date;
 }

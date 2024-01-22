@@ -3,6 +3,7 @@ import { ProductoService } from 'src/app/services/producto.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from 'src/app/shared/models/usuario';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -33,6 +34,10 @@ export class HeaderComponent {
     this.showLogin = true;
     this.showRegister = false;
     this.hideOtherComponents('login');
+  }
+
+  mostrartodos(){
+    this._productoService.setCategoriaSeleccionada("");
   }
 
 

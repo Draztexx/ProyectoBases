@@ -5,6 +5,7 @@ import { Producto } from '../shared/models/producto';
 import { CarritoItem } from '../shared/models/carritoItem';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../shared/models/usuario';
+import { UsuarioService } from './usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,15 @@ export class CarritoService {
   url='http://localhost:4000/api/finalizarcompra/'
   private carrito:Carrito=this.getCarritoFromLocalStorage();
   private carritoSubject: BehaviorSubject<Carrito>= new BehaviorSubject(this.carrito);
-  constructor(private http: HttpClient) { }
-
+  private user: Usuario;
+    constructor(private http: HttpClient,UserService:UsuarioService) {
+      this.user=UserService.getUsuarioFromLocalStorage();
+      
+     }  
   guardarCarrito(){
     console.log(this.carrito);
-  return this.http.post(this.url, this.carrito)
+      this.carrito.correo=this.user.email;
+      return this.http.post(this.url, this.carrito)
     .subscribe(
       (response) => {
         console.log('Solicitud POST exitosa:', response);

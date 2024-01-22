@@ -14,11 +14,13 @@
               <span class="nombre">{{ item.producto.nombre }}</span><br>
               <span class="cantidad">Cantidad: {{ item.cantidad }}</span><br>
               <span class="precio">Precio: {{ item.precio }}</span>
+              
             </div>
           </li>
         </ul>
         <p class="total">Total: {{ carrito.precioTotal }}</p>
         <p class="cantidad-total">Cantidad Total: {{ carrito.cantidadTotal }}</p>
+        <p class="fecha">Fecha: {{ carrito.fechaCreacion }}</p>
       </div>
     </div>
   </div>

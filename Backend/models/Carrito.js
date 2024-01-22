@@ -18,6 +18,10 @@ const CarritoSchema=mongoose.Schema({
     correo:{
         type: String,
         required:true
+    },
+    fechaCreacion: {
+        type: Date,
+        default: Date.now
     }
 })
 

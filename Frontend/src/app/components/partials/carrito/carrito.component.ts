@@ -1,9 +1,10 @@
 // carrito.component.ts
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Carrito } from '../../shared/models/carrito';
+import { Carrito } from '../../../shared/models/carrito';
 import { CarritoService } from 'src/app/services/carrito.service';
 import { CarritoItem } from 'src/app/shared/models/carritoItem';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-carrito',
@@ -13,7 +14,7 @@ import { CarritoItem } from 'src/app/shared/models/carritoItem';
 export class CarritoComponent implements OnInit {
 
   carrito!: Carrito;
-  constructor(private carritoService: CarritoService){
+  constructor(private h:HeaderComponent, private carritoService: CarritoService){
 
     this.carritoService.getCarritoObservable().subscribe((carrito)=>this.carrito=carrito)}
 
@@ -35,6 +36,6 @@ export class CarritoComponent implements OnInit {
   @Output() onClose: EventEmitter<void> = new EventEmitter<void>();
 
   finalizarCompra() {
-    alert('¡Compra finalizada con éxito!');
+    this.h.toggleCarrito();
   }
 }

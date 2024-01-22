@@ -1,10 +1,31 @@
 <div class="login-container">
-  <h2 class="login-title">Iniciar Sesión</h2>
-  <form class="login-form">
-    <input type="text" class="login-input" placeholder="Nombre de Usuario">
-    <input type="password" class="login-input" placeholder="Contraseña">
-    <button type="button" class="login-button" (click)="login()">Iniciar Sesión</button>
-    <br>
-    <button  routerLink="/usuarios/register">Registrarse</button>
-  </form>
+  <h2 class="login-title">Usuario</h2>
+  <div class="login-form">
+    <ul>
+      <ul>
+      <li >
+        <div>
+            <p>Nombre: {{ usuario.nombre }}</p>
+        </div>
+      </li>
+      </ul>
+      <ul>
+        <li>
+          <div>
+            <p>Correo: {{ usuario.email }}</p>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div>
+            <p>Direccion: {{ usuario.direccion }}</p>
+          </div>
+        </li>
+      </ul>
+      
+
+    </ul>
+    <button (click)="logout()" routerLink="/usuarios/register" c>Registrarse</button>
+  </div>
 </div>

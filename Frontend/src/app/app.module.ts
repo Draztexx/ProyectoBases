@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/partials/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { LatizquierdoComponent } from './components/latizquierdo/latizquierdo.component';
 import { HttpClientModule } from '@angular/common/http';

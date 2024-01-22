@@ -76,7 +76,7 @@ export class CarritoService {
   private setCarritoToLocalStorage():void{
     this.carrito.precioTotal=this.carrito.items.reduce((prevSum,currentItem)=>prevSum+currentItem.precio,0)
     this.carrito.cantidadTotal=this.carrito.items.reduce((prevSum,currentItem)=>prevSum+currentItem.cantidad,0)
-    this.carrito.correo="luna@2gmail.com";
+    this.carrito.correo="";
     const carritoJson=JSON.stringify(this.carrito);
     localStorage.setItem('Carrito',carritoJson);
     this.carritoSubject.next(this.carrito);

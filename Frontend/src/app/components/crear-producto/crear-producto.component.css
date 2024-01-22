@@ -2,3 +2,48 @@
   text-align: start;   
   margin-left: 7px;
 }
+
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container- {
+  margin-top: 40px;
+  margin-right: 500px; 
+}
+
+.card {
+  margin-top: 20px;
+  margin-right: 500px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.btn-success {
+  margin-top: 10px;
+}
+
+.table {
+  margin-right: 500px;
+  width: 900px;
+}
+
+.fa-solid {
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.fa-solid:hover {
+  opacity: 0.8;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.ojo{
+  width: 100%;
+}

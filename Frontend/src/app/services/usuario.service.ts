@@ -19,13 +19,13 @@ export class UsuarioService {
   }
 
   login(usuario: IUserLogin): Observable<Usuario> {
-    // Corrige la URL y agrega el usuario al cuerpo de la solicitud
+
     return this.http.post<Usuario>(this.url,usuario);
   }
 
 
   register(usuario: Usuario): Observable<Usuario> {
-    // Corrige la URL y agrega el usuario al cuerpo de la solicitud
+
     return this.http.post<Usuario>('http://localhost:4000/api/usuarios/register', usuario)
       .pipe(
         tap(() => {
@@ -36,8 +36,6 @@ export class UsuarioService {
   }
 
   guardarCookie(response: any) {
-    console.log('Respuesta completa:', response);
-
     console.log('Respuesta completa:', response);
 
   if (response.token) {
@@ -56,5 +54,9 @@ export class UsuarioService {
     return usuarioJson? JSON.parse(usuarioJson):new Usuario();
 
   }
+
+  
+
+  
 
 }

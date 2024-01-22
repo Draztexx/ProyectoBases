@@ -1,6 +1,6 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3">
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="ojo ">
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">{{titulo | uppercase }}</span>
@@ -47,7 +47,7 @@
                              
 
                         <div class="mb-3">
-                            <button routerLink="/" class="btn btn-secondary btn-lg float-start">VOLVER</button>
+                            <button routerLink="/admin" class="btn btn-secondary btn-lg float-start">VOLVER</button>
                             <button type="submit" [disabled]="productoForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
                         </div>
 

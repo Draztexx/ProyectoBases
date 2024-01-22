@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Usuario } from 'src/app/shared/models/usuario';
 
 import  { UsuarioService } from 'src/app/services/usuario.service';
@@ -17,7 +17,7 @@ export class LoginPageComponent implements OnInit{
   isSubmitted=false;
   constructor(private formBuilder:FormBuilder,
               private _usuarioService: UsuarioService,
-              private aRouter: ActivatedRoute){}
+              private aRouter: Router){}
 
   
 
@@ -46,6 +46,7 @@ export class LoginPageComponent implements OnInit{
   
     this._usuarioService.login(usuario).subscribe(
       (response) => {
+        this.aRouter.navigate(['/producto']);
         this._usuarioService.guardarCookie(response);
         localStorage.setItem('Usuario', JSON.stringify(response));
       },
@@ -54,6 +55,10 @@ export class LoginPageComponent implements OnInit{
       }
     );
   }
+
+
+  
+
  
 
 }

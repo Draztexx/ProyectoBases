@@ -18,6 +18,7 @@ export class FinalizarcompraComponent  {
 
 
   agregarCarrito(){
+      
       this.carritoService.guardarCarrito();
       alert("Compra Finalizada")
       this.carritoService.clearCart()

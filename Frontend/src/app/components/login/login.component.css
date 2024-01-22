@@ -1,22 +1,34 @@
+/* carrito.component.css */
+
+.login-container {
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  position: absolute;
+  top: 125px;
+  right: 0px;
+  text-align: center;
+  width: 500px;
+  height: 700px;
+}
+
+.login-container {
+  max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto;
+}
+
 .login-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.login-input {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.login-button {
+.finalizar-compra-button {
   background-color: black;
   color: #fff;
   padding: 10px;
@@ -24,35 +36,85 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 20px;
 }
 
-.login-button:hover {
+.finalizar-compra-button:hover {
   background-color: gray;
 }
 
-.login-container {
-  position: absolute;
-  top: 125px; /* Ajusta la posición vertical según el tamaño del menú */
-  right: 0px;
-  background-color: #fff;
-  padding: 20px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  text-align: center;
-}
-.register-button {
-  background-color: black;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1.5rem;
+  margin-top:  0.5rem;
+
 }
 
-.register-button:hover {
-  background-color: gray; /* Color verde oscuro al hacer hover */
+ul{
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  list-style: none;
+  margin: 0.5rem;
+  padding: 0;
 }
+
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+  
+}
+
+ul li:last-child{
+  border: none;
+}
+
+li img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+li div{
+  padding: 1rem;
+}
+
+li div:not(:first-child){
+  flex-basis: 18%;
+}
+
+li select{
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+li .remove-button{
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  color: #e72929;
+  opacity: 0.7;
+  outline: none;
+}
+
+li .remove-button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+

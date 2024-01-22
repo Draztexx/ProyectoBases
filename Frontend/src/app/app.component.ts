@@ -17,13 +17,11 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Verifica si la ruta actual tiene la propiedad data.login como verdadera
         this.isLoginPageComponent = this.router.routerState.snapshot.root.firstChild?.data?.login === true;
       }
     });
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Verifica si la ruta actual tiene la propiedad data.login como verdadera
         this.isRegisterComponent = this.router.routerState.snapshot.root.firstChild?.data?.register === true;
       }
     });

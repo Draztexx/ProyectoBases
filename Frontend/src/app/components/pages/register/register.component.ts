@@ -11,11 +11,12 @@ import  { UsuarioService } from 'src/app/services/usuario.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit{ 
+export class RegisterComponent implements OnInit{
   registerForm!:FormGroup;
   constructor(private formBuilder:FormBuilder,
     private _usuarioService: UsuarioService,
     private aRouter: ActivatedRoute){}
+    isSubmitted=false;
 
   ngOnInit(): void {
     this.registerForm=this.formBuilder.group({
@@ -28,16 +29,17 @@ export class RegisterComponent implements OnInit{
   }
   @Output() onLoginClick: EventEmitter<void> = new EventEmitter<void>();
 
-  
+
 
   get fc(){
     return this.registerForm.controls;
   }
   submit(){
+    this.isSubmitted=true
     if (this.registerForm.invalid) {
       return;
     }
-  
+
     const usuario : Usuario= {
       nombre: this.fc.nombre.value,
       email: this.fc.email.value,
@@ -45,7 +47,7 @@ export class RegisterComponent implements OnInit{
       direccion: this.fc.direccion.value,
       tipo: this.fc.tipo.value === 'true',
     };
-    
+
 
     this._usuarioService.register(usuario).subscribe(
       (response) => {

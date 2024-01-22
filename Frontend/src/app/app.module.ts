@@ -41,7 +41,7 @@ import { ListarComprasComponent } from './components/pages/listar-compras/listar
     LatderechoComponent,
     FinalizarcompraComponent,
     ListarComprasComponent,
-    
+
   ],
   imports: [
     BrowserModule,

@@ -1,42 +1,79 @@
-.container{
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(8px); 
-    background-color: rgba(240, 248, 255, 0.7);
-    min-height: 100vh;
-    min-width: 100vw;
-
-    
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.7); /* Negro con opacidad */
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
 }
 
 .details {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Asegura que el componente esté por encima de otros elementos */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  color: black;
 }
 
-.overlay-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black; /* Texto en negro */
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black; /* Texto en negro */
 }
 
-.titulo{
+.input-container {
+  margin-bottom: 15px;
+}
 
-} 
+label {
+  color: black; /* Texto en negro */
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc; /* Gris claro */
+  border-radius: 5px;
+}
+
+.error-list {
+  color: red; /* Texto en rojo para los errores */
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: black; /* Fondo negro para el botón de enviar */
+  color: white; /* Texto blanco para el botón de enviar */
+}
+
+button[routerLink="/usuarios/register"] {
+  background-color: #ccc; /* Fondo gris claro para el botón de registrarse */
+  color: black; /* Texto en negro para el botón de registrarse */
+}

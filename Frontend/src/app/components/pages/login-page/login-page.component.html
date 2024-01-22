@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <div class="details">
         <div class="titulo">LOGIN</div>
         <form [formGroup]="loginForm" (ngSubmit)="submit()">
@@ -23,6 +23,7 @@
                     <div *ngIf="fc.password.errors.required">La password no puede estar vacia</div>
                 </div>
             </div>
+            <br>
             <div class="button">
                 <button type="submit" >Login</button>
                 <button  routerLink="/usuarios/register">Registrarse</button>

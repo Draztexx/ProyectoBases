@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65aed06ea110cab4b952fcd9"
+  },
+  "nombre": "Admin",
+  "email": "admin@gmail.com",
+  "passwordHash": "$2b$10$1I1ibqKBZBCEJrxmHBz9ZupVXrFXAy2RzaRtxOrc2RYAxCJZTeleW",
+  "direccion": "Paza Mayor",
+  "tipo": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aed278a110cab4b952fd21"
+  },
+  "nombre": "Luna",
+  "email": "luna@gmail.com",
+  "passwordHash": "$2b$10$/dO4nXb64R7alox0sHM.f.Ze0fIIP2ZmyVrYUja2.sJ7QMrQgN2AW",
+  "direccion": "C/Oropendola",
+  "tipo": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b2f0da4b41c1716b1c8cf2"
+  },
+  "nombre": "Ruben",
+  "email": "ruben@gmail.com",
+  "passwordHash": "$2b$10$d.M7a7F6d.j8R52ZRu26FO2MvcdvWtM8okBZJRNvx6MZr4fqYHaYC",
+  "direccion": "su casa",
+  "tipo": false,
+  "__v": 0
+}]

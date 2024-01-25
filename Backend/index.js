@@ -1,13 +1,30 @@
 const express = require('express');
-const conectarDB= require('./config/db');
+const mongoose=require('mongoose');
+//const conectarDB= require('./config/db');
 const cookieParser = require('cookie-parser');
 const cors= require("cors");
 
-//Creamos el servidor
+const url = "mongodb://localhost:27017/meanproductos"
 
-const app= express();
-//Conectamos a la base de datos
-conectarDB();
+
+
+//conectarDB();
+
+
+mongoose.connect(url,{})
+    .then(result=>console.log("database conectada"))
+    .catch(err=>console.log(err))
+
+const port= 4000;
+const app= express();  
+
+app.listen(port,()=>{
+    console.log("Servidor Corriendo en el puerto "+ port)
+})
+
+
+
+
 app.use(cors())
 
 app.use(express.json());
@@ -28,6 +45,3 @@ app.get('/',(req,res)=>{
 })
 */
 
-app.listen(4000, ()=> {
-    console.log('El servidor esta corriendo perfectamente')
-})

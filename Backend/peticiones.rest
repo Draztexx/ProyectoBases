@@ -70,7 +70,7 @@ POST  http://localhost:4000/api/miscompras/correo
 Content-Type: application/json
 
 {
-    "email": "salesianos@gmail.com"
+    "email": "admin@gmail.com"
 }
 
 

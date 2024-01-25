@@ -1,4 +1,11 @@
 const moongose=require('mongoose');
+
+
+
+
+
+
+/*
 require('dotenv').config({path:'variables.env'});
 
 //en variables.env se configura a que base de datos se va a meter
@@ -17,5 +24,6 @@ const conectarDB=async()=>{
     process.exit(1);
     }
 }
+*/
 
 module.exports=conectarDB;

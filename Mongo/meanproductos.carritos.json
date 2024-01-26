@@ -1,0 +1,116 @@
+[{
+  "_id": {
+    "$oid": "65aed24ea110cab4b952fd1b"
+  },
+  "items": [
+    {
+      "producto": {
+        "_id": "65aec786a110cab4b952fb4d",
+        "nombre": "Plato de Acción de Gracias",
+        "categoria": "Americana",
+        "precio": 35,
+        "tags": [
+          "Tradicional",
+          "Casero"
+        ],
+        "url": "assets/food-4.jpg",
+        "disponible": true,
+        "fechaCreacion": "2024-01-22T19:52:38.586Z",
+        "__v": 0
+      },
+      "cantidad": 1,
+      "precio": 35
+    },
+    {
+      "producto": {
+        "_id": "65aecc30a110cab4b952fb98",
+        "nombre": "Ramen",
+        "categoria": "Asiatica",
+        "precio": 27,
+        "tags": [
+          "Japon",
+          "Cerdo"
+        ],
+        "url": "assets/food-9.jpg",
+        "disponible": true,
+        "fechaCreacion": "2024-01-22T20:12:32.419Z",
+        "__v": 0
+      },
+      "cantidad": 1,
+      "precio": 27
+    }
+  ],
+  "precioTotal": 62,
+  "cantidadTotal": 2,
+  "correo": "admin@gmail.com",
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:38:38.176Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aed288a110cab4b952fd29"
+  },
+  "items": [
+    {
+      "producto": {
+        "_id": "65aece00a110cab4b952fbc0",
+        "nombre": "Anticuchos",
+        "categoria": "Otros",
+        "precio": 14,
+        "tags": [
+          "Bolivia",
+          "Corazon",
+          "Res"
+        ],
+        "url": "assets/food-12.jpg",
+        "disponible": true,
+        "fechaCreacion": "2024-01-22T20:20:16.245Z",
+        "__v": 0
+      },
+      "cantidad": 1,
+      "precio": 14
+    }
+  ],
+  "precioTotal": 14,
+  "cantidadTotal": 1,
+  "correo": "luna@gmail.com",
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:39:36.524Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b2f08b4b41c1716b1c8cd1"
+  },
+  "items": [
+    {
+      "producto": {
+        "_id": "65aece00a110cab4b952fbc0",
+        "nombre": "Anticuchos",
+        "categoria": "Otros",
+        "precio": 14,
+        "tags": [
+          "Bolivia",
+          "Corazon",
+          "Res"
+        ],
+        "url": "assets/food-12.jpg",
+        "disponible": true,
+        "fechaCreacion": "2024-01-22T20:20:16.245Z",
+        "__v": 0
+      },
+      "cantidad": 4,
+      "precio": 56
+    }
+  ],
+  "precioTotal": 56,
+  "cantidadTotal": 4,
+  "correo": "admin@gmail.com",
+  "fechaCreacion": {
+    "$date": "2024-01-25T23:36:43.786Z"
+  },
+  "__v": 0
+}]

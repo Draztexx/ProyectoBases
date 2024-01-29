@@ -1,33 +1,238 @@
 [{
   "_id": {
-    "$oid": "65aed06ea110cab4b952fcd9"
+    "$oid": "65aec440a110cab4b952fb1d"
   },
-  "nombre": "Admin",
-  "email": "admin@gmail.com",
-  "passwordHash": "$2b$10$1I1ibqKBZBCEJrxmHBz9ZupVXrFXAy2RzaRtxOrc2RYAxCJZTeleW",
-  "direccion": "Paza Mayor",
-  "tipo": true,
+  "nombre": "Albondiga",
+  "categoria": "Italiana",
+  "precio": 15,
+  "tags": [
+    "Ternera",
+    "Cebolla",
+    "Casero"
+  ],
+  "url": "assets/food-2.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:38:40.524Z"
+  },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "65aed278a110cab4b952fd21"
+    "$oid": "65aec53fa110cab4b952fb2c"
   },
-  "nombre": "Luna",
-  "email": "luna@gmail.com",
-  "passwordHash": "$2b$10$/dO4nXb64R7alox0sHM.f.Ze0fIIP2ZmyVrYUja2.sJ7QMrQgN2AW",
-  "direccion": "C/Oropendola",
-  "tipo": false,
+  "nombre": "Pizza Pepperoni",
+  "categoria": "Italiana",
+  "precio": 12,
+  "tags": [
+    "Pizza",
+    "Comida Rapida",
+    "Queso Mozzarella"
+  ],
+  "url": "assets/food-1.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:42:55.072Z"
+  },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "65b2f0da4b41c1716b1c8cf2"
+    "$oid": "65aec6afa110cab4b952fb3e"
   },
-  "nombre": "Ruben",
-  "email": "ruben@gmail.com",
-  "passwordHash": "$2b$10$d.M7a7F6d.j8R52ZRu26FO2MvcdvWtM8okBZJRNvx6MZr4fqYHaYC",
-  "direccion": "su casa",
-  "tipo": false,
+  "nombre": "Hamburguesa",
+  "categoria": "Americana",
+  "precio": 12,
+  "tags": [
+    "Res",
+    "Comida Rapida"
+  ],
+  "url": "assets/food-3.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:49:03.365Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aec786a110cab4b952fb4d"
+  },
+  "nombre": "Plato de Acción de Gracias",
+  "categoria": "Americana",
+  "precio": 35,
+  "tags": [
+    "Tradicional",
+    "Casero"
+  ],
+  "url": "assets/food-4.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:52:38.586Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aec8bba110cab4b952fb5f"
+  },
+  "nombre": "Cuscús",
+  "categoria": "Arabe",
+  "precio": 23,
+  "tags": [
+    "Saludable",
+    "Acompañamiento"
+  ],
+  "url": "assets/food-5.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:57:47.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aec96ca110cab4b952fb68"
+  },
+  "nombre": "Shawarma",
+  "categoria": "Arabe",
+  "precio": 15,
+  "tags": [
+    "Turkia",
+    "Mixto"
+  ],
+  "url": "assets/food-6.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:00:44.353Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aecaaaa110cab4b952fb87"
+  },
+  "nombre": "Tortilla de Patatas",
+  "categoria": "Española",
+  "precio": 30,
+  "tags": [
+    "Huevos",
+    "Casero"
+  ],
+  "url": "assets/food-7.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:06:02.031Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aecb65a110cab4b952fb90"
+  },
+  "nombre": "Hornazo",
+  "categoria": "Española",
+  "precio": 32,
+  "tags": [
+    "Salamanca",
+    "Casero"
+  ],
+  "url": "assets/food-8.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:09:09.809Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aecc30a110cab4b952fb98"
+  },
+  "nombre": "Ramen",
+  "categoria": "Asiatica",
+  "precio": 27,
+  "tags": [
+    "Japon",
+    "Cerdo"
+  ],
+  "url": "assets/food-9.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:12:32.419Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aeccbfa110cab4b952fba8"
+  },
+  "nombre": "Yakitori",
+  "categoria": "Asiatica",
+  "precio": 19,
+  "tags": [
+    "Japon",
+    "Brochetas"
+  ],
+  "url": "assets/food-10.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:14:55.973Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aecd14a110cab4b952fbb7"
+  },
+  "nombre": "Salteñas",
+  "categoria": "Otros",
+  "precio": 17,
+  "tags": [
+    "Bolivia",
+    "Empanada"
+  ],
+  "url": "assets/food-11.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:16:20.631Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65aece00a110cab4b952fbc0"
+  },
+  "nombre": "Anticuchos",
+  "categoria": "Otros",
+  "precio": 14,
+  "tags": [
+    "Bolivia",
+    "Corazon",
+    "Res"
+  ],
+  "url": "assets/food-12.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T20:20:16.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65b2ec69a993c68c750eab26"
+  },
+  "nombre": "Pizza Pepperoni",
+  "categoria": "Italiana",
+  "precio": 12,
+  "tags": [
+    "Pizza",
+    "Comida Rapida",
+    "Queso Mozzarella"
+  ],
+  "url": "assets/food-1.jpg",
+  "disponible": true,
+  "fechaCreacion": {
+    "$date": "2024-01-22T19:42:55.072Z"
+  },
   "__v": 0
 }]

@@ -4,7 +4,7 @@ const mongoose=require('mongoose');
 const cookieParser = require('cookie-parser');
 const cors= require("cors");
 
-const url = "mongodb://localhost:27017/meanproductos"
+const url = "mongodb://127.0.0.1:27017/meanproductos"
 
 
 
